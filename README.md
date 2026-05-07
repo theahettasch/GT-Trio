@@ -48,7 +48,7 @@ To run the pipeline with you own data, open the configuration file `config.yaml`
 - Phased genotypes for trio all trio parents (VCF). Remember that the VCF has to be phased with alleles separated by vertical pipes `0|0` `1|0` `1|1`
 - Oxford Nanopore (ONT) long-reads from offspring genome (FASTQ). Perform any desired filtering of reads prior to running the pipeline.
 
-### Required parameters
+### Required parameters (config.yaml)
 ```
 ### Input files and parameters ###
 
