@@ -19,9 +19,9 @@ To mimic Illumina short-read data used in conventional trio-binning, paired-end 
 ### Step 3: Parental k-mer dictionary construction
 **Software:** [Yak](https://github.com/lh3/yak) (v0.1)
 
-Parental k-mer dictionaries are created from simulated parental reads with Yak. An appropriate k-mer size has to be chosen to ensure a dictionary of unique paternal and maternal k-mers.
+Parental k-mer dictionaries are created from simulated parental reads with Yak. An appropriate k-mer size has to be chosen to ensure a dictionary of unique paternal and maternal k-mers. See Koren et al. on how to choose an appropriate value of k.  
 
-### Step 4: Haplotype-resolved assembly with trio-binning
+### Step 4: Haplotype-resolved assembly
 **Software:** [Hifiasm](https://github.com/chhylp123/hifiasm) (v0.24.0)
 
 Offspring long-reads (ONT) are assembled into haplotypes using the trio-binning feature implemented in Hifiasm. 
