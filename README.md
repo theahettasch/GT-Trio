@@ -48,7 +48,8 @@ To run the pipeline with you own data, open the configuration file `config.yaml`
 When necessary dependencies (conda and snakemake) are available and any required input files and parameters have been defined in the configuration file, the GT-Trio pipeline can be run with the following command:
 
 ```
-#Run locally. Be aware that some of the tools implemented in the pipeline require certain amounts of memory and threads. 
+#Run locally. Be aware that some of the tools implemented in the pipeline require certain amounts of memory and threads.
+
 snakemake \
   --use-conda \
   --cores 8 \ 
@@ -71,15 +72,6 @@ snakemake \
   --jobs 10 \
   --cluster "sbatch --mem={resources.mem_mb} --cpus-per-task={threads} --output={log[0]}" \ 
 ```
-
-### Input files
-The following input files are required to run the pipeline:
-
-`reference.fasta` A high-quality reference genome (FASTA) for parental sequence reconstruction. 
-
-`phased_parental_genotypes.vcf` Phased genotypes for trio all trio parents (VCF). Remember that the VCF has to be phased with alleles separated by vertical pipes `0|0` `1|0` `1|1`
-
-`offspring_reads.fastq` Oxford Nanopore (ONT) long-reads from offspring genome (FASTQ). Perform any desired filtering of reads prior to running the pipeline.
 
 ### Output files
 The pipeline outputs the following output files:
