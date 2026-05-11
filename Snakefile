@@ -4,7 +4,7 @@
 ############################################
 import math
 
-configfile: "config.yaml"
+configfile: "config/config.yaml"
 OUTDIR = config["out_dir"]
 
 
