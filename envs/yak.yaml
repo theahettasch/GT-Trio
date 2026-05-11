@@ -1,0 +1,8 @@
+
+name: yak
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - yak=0.1
+
