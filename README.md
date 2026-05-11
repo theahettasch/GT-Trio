@@ -1,7 +1,5 @@
 # GenoType-based Trio-binning (GT-Trio)
 
-Test.
-
 This is a [Snakemake](https://snakemake.readthedocs.io/en/stable/) pipeline for creating *de novo* haplotype-resolved genome assemblies with trio-binning, using phased genotypes as parental input. 
 
 The pipeline consists of five steps: (1) parental sequence reconstruction, (2) parental read simulation (3) parental k-mer dictionary construction, (4) haplotype-resolved assembly with trio-binning and (5) reference-based scaffolding. 
@@ -35,50 +33,33 @@ Contigs outputted by Hifiasm are combined into chromosome-level scaffolds with R
 
 ## Usage
 ### Environment setup
-Install conda and snakemake. 
+Make sure that conda and snakemake is installed and activted. 
 
 ### Clone git repo
 ```
 git clone https://github.com/theahettasch/GT-Trio.git
 cd GT-Trio
 ```
-### Running the pipeline with your own data
-To run the pipeline with you own data, open the configuration file `config.yaml` and define any required input files and parameters.  
 
-### Required input files
-- A high-quality reference genome (FASTA) for parental sequence reconstruction. 
-- Phased genotypes for trio all trio parents (VCF). Remember that the VCF has to be phased with alleles separated by vertical pipes `0|0` `1|0` `1|1`
-- Oxford Nanopore (ONT) long-reads from offspring genome (FASTQ). Perform any desired filtering of reads prior to running the pipeline.
+### Define input files and parameters in configuration file (config/config.yaml)
+To run the pipeline with you own data, open the configuration file `config.yaml` and define any required input files and parameters. 
 
-### Required parameters (config.yaml)
+### Run pipeline
+When necessary dependencies (conda and snakemake) are available and any required input files and parameters have been defined in the configuration file, the GT-Trio pipeline can be run with the following command:
 ```
-### Input files and parameters ###
-
-out_dir: "/path/out_dir_name"                         #Define the path and name for the output directory
-reference: "/path/to/reference_genome.fa"             #Path to high-quality reference genome used for parental sequence reconstruction and scaffolding
-vcf: "/path/to/parents.phased.vcf.gz"                 #Path to VCF with phased genotypes for trio parents
-offspring_reads: "/path/to/offspring_reads.fq.gz"     #Path to offspring reads (ONT)
-
-### Step 1: Sequence reconstruction parameters ###
-
-pat_sample: "paternal_samplename"                     #Paternal sample name used in VCF with phased genotypes
-mat_sample: "maternal_samplename"                     #Maternal sample name used in VCF with phased genotypes
-
-### Step 2: Read simulation parameters
-
-read_length: "150"                                    #Read length (bp)
-read_depth: "30"                                      #Desired read depth per parent
-genome_size: "2800000000"                             #Genome size. Required to convert read_depth to read count (-N) in wgsim
-error_rate: "0"                                       #Base error rate
-mutation_rate: "0"                                    #Mutation rate
-indel_fraction: "0"                                   #Indel fraction
-indel_extension: "0"                                  #Indel extension probability
-
-### Step 3: Haplotype assembly parameters
-
-yak_kmer: "21"                                        #K-mer size
-yak_bloom_bits: "37"                                  #Bloom filter used to filter out singleton k-mers
+snakemake \
+  --use-conda \
+  --jobs 100 \
+  --rerun-incomplete \
+  --latency-wait 60 \
+  --cluster "sbatch --mem={resources.mem_mb} --cpus-per-task={threads} --output={log[0]}" \
 ```
+### Input files
+The following input files are required to run the pipeline:
+`reference.fasta` A high-quality reference genome (FASTA) for parental sequence reconstruction. 
+`phased_parental_genotypes.vcf` Phased genotypes for trio all trio parents (VCF). Remember that the VCF has to be phased with alleles separated by vertical pipes `0|0` `1|0` `1|1`
+`offspring_reads.fastq` Oxford Nanopore (ONT) long-reads from offspring genome (FASTQ). Perform any desired filtering of reads prior to running the pipeline.
+
 ### Output files
 The pipeline outputs the following output files:
 
