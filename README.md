@@ -1,5 +1,7 @@
 # GenoType-based Trio-binning (GT-Trio)
 
+Test.
+
 This is a [Snakemake](https://snakemake.readthedocs.io/en/stable/) pipeline for creating *de novo* haplotype-resolved genome assemblies with trio-binning, using phased genotypes as parental input. 
 
 The pipeline consists of five steps: (1) parental sequence reconstruction, (2) parental read simulation (3) parental k-mer dictionary construction, (4) haplotype-resolved assembly with trio-binning and (5) reference-based scaffolding. 
