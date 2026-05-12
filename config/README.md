@@ -6,7 +6,7 @@ The following input files are required to run the pipeline:
 - `parents.phased.vcf.gz` Phased genotypes for trio parents. Alleles should be separated by vertical pipes `0|0` `1|0` `1|1`
 - `offspring_reads.fq.gz` Oxford Nanopore (ONT) long-reads from offspring genome. Perform any desired filtering of reads prior to running the pipeline.
 
-### User-defined input files and parameters (config/config.yaml)
+### Define input files and parameters in configuration file (config/config.yaml)
 Any input files and required parameters have to be defined in the configuration file before running the pipeline. 
 ```
 ### Input files and parameters ###
