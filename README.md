@@ -70,7 +70,7 @@ or
 snakemake \
   --use-conda \
   --jobs 10 \
-  --cluster "sbatch --mem={resources.mem_mb} --cpus-per-task={threads} --output={log[0]}" \ 
+  --cluster "sbatch --mem={resources.mem_mb} --cpus-per-task={threads} --output={log[0]}" 
 ```
 
 ### Output files
