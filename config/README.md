@@ -35,4 +35,10 @@ indel_extension: "0"                                  #Indel extension probabili
 
 yak_kmer: "21"                                        #K-mer size used to build parental k-mer dictionaries.
 yak_bloom_bits: "37"                                  #Bloom filter used to filter out singleton k-mers.
+
+### Step 5: Scaffolding parameters
+
+goruping_conf: "0.7"                                  #Minimum grouping confidence score (-i)
+location_conf: "0.6"                                  #Minimum location confidence score (-a)
+orientation_conf: "0.7"                               #Minimum orientation confidence score (-s)
 ```
