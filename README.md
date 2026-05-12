@@ -45,7 +45,7 @@ cd GT-Trio
 To run the pipeline with you own data, open the configuration file `config/config.yaml` and define any required input files and parameters (see [config/README.md](https://github.com/theahettasch/GT-Trio/blob/main/config/README.md)).
 
 ### Run pipeline
-When necessary dependencies (Conda and Snakemake) are available and any required input files and parameters have been defined in the configuration file, the GT-Trio pipeline can be run with one of the following commands:
+When necessary dependencies (Conda and Snakemake) are available and any required input files and parameters have been defined in the configuration file, the GT-Trio pipeline can be run with one of the following commands from inside the GT-Trio directory:
 
 ```
 #Run locally. Be aware that some of the tools implemented in the pipeline require certain amounts of memory and threads. 
