@@ -187,7 +187,10 @@ rule scaffold_contigs:
     resources:
         mem_mb=80000
     params:
-        outdir=OUTDIR
+        outdir=OUTDIR,
+        group_c=config["grouping_conf"],
+        loc_c=config["location_conf"],
+        orient_c=config["orientation_conf"]
     conda:
         "envs/ragtag.yaml"
     log:
@@ -201,5 +204,8 @@ rule scaffold_contigs:
             {output.hap1} \
             {output.hap2} \
             {threads} \
+            {params.group_c} \
+            {params.loc_c} \
+            {params.orient_c} \
             {params.outdir}
         """
