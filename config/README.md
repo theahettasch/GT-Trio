@@ -38,7 +38,7 @@ yak_bloom_bits: "37"                                  #Bloom filter used to filt
 
 ### Step 5: Scaffolding parameters
 
-goruping_conf: "0.7"                                  #Minimum grouping confidence score (-i)
+grouping_conf: "0.7"                                  #Minimum grouping confidence score (-i)
 location_conf: "0.6"                                  #Minimum location confidence score (-a)
 orientation_conf: "0.7"                               #Minimum orientation confidence score (-s)
 ```
