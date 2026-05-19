@@ -57,7 +57,7 @@ snakemake \
 ```
 or
 ```
-#Run on SLURM cluster. Required memory and threads is defined individually in each snakemake rule.
+#Run on SLURM cluster. Required memory and threads is allready defined individually in each snakemake rule.
 
 #!/usr/bin/env bash
 #SBATCH --job-name=GT-Trio
