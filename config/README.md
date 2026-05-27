@@ -31,7 +31,7 @@ mutation_rate: "0"                                    #Mutation rate. Default se
 indel_fraction: "0"                                   #Indel fraction. Default set to 0 to avoid introducing any indels.
 indel_extension: "0"                                  #Indel extension probability. Default set to 0 to avoid indel extension. 
 
-### Step 3: Haplotype assembly parameters
+### Step 3: K-mer dictionary construction parameters
 
 yak_kmer: "21"                                        #K-mer size used to build parental k-mer dictionaries.
 yak_bloom_bits: "37"                                  #Bloom filter used to filter out singleton k-mers.
