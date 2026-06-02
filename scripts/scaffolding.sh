@@ -12,7 +12,7 @@ threads="$6"
 group_conf="$7"
 loc_conf="$8"
 orient_conf="$9"
-outdir="$10"
+outdir="${10}"
 
 mkdir -p ${outdir}/ragtag
 
