@@ -80,7 +80,7 @@ The pipeline outputs the following files:
 
 `parent_data/*aternal_sequence_hap2.fasta` Reconstructed paternal/maternal sequence of haplotype 2
 
-`parent_data/*aternal_reads.fg.gz` Paternal/maternal simulated reads
+`parent_data/*aternal_reads.fq.gz` Paternal/maternal simulated reads
 
 `parent_data/*aternal_count.yak` Paternal/maternal k-mer dictionaries
 
