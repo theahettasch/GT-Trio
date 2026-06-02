@@ -12,9 +12,9 @@ out_mat="$6"
 read_length="$7"
 read_pairs="$8"
 mutation_rate="$9"
-indel_fraction="$10"
-indel_extension="$11"
-error_rate="$12"
+indel_fraction="${10}"
+indel_extension="${11}"
+error_rate="${12}"
 
 
 # Temp files
