@@ -97,5 +97,5 @@ The pipeline outputs the following files:
 `assembly/offspring_assembly_chr_maternal.fasta` Offspring assembly of maternal haplotype (chromosome scaffolds)
 
 ## Citing
-I you use the pipeline, please site this paper:
+I you use the pipeline, please site this paper: TBA
 
