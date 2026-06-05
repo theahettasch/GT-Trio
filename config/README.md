@@ -3,7 +3,7 @@
 The following input files are required to run the pipeline:
 
 - `reference_genome.fa` A high-quality reference genome for parental sequence reconstruction. 
-- `parents.phased.vcf.gz` Phased genotypes for trio parents. Alleles should be separated by vertical pipes `0|0` `1|0` `1|1`
+- `parents.phased.vcf.gz` Phased genotypes for trio parents with alleles separated by vertical pipes `0|0` `1|0` `1|1`. Remember that variant positions have to match the reference genome.  
 - `offspring_reads.fq.gz` Oxford Nanopore (ONT) long-reads from offspring genome. Perform any desired filtering of reads prior to running the pipeline.
 
 ### Define input files and parameters in configuration file (config/config.yaml)
