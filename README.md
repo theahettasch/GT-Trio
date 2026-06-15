@@ -97,5 +97,5 @@ The pipeline outputs the following files:
 `assembly/offspring_assembly_chr_maternal.fasta` Offspring assembly of maternal haplotype (chromosome scaffolds)
 
 ## Citing
-I you use the pipeline, please site this paper: TBA
+I you use the pipeline, please site this paper: [Haplotype assembly without parental sequencing: Genotype-based trio-binning (GT-Trio)](https://doi.org/10.64898/2026.06.08.729486)
 
